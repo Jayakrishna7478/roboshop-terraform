@@ -6,12 +6,12 @@ terraform {
     }
   }
 
-  # backend "s3" {
-  #   bucket = "aws-remote-state"
-  #    key    = "ec2"
-  #    region = "us-east-1"
-  #    dynamodb_table = "aws-dev"
-  # }
+  backend "s3" {
+    bucket = "aws-remote-state"
+     key    = "ec2"
+     region = "us-east-1"
+     dynamodb_table = "aws-dev"
+  }
 }
 
 provider "aws" {
