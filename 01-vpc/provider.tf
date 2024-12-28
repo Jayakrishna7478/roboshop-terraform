@@ -6,14 +6,15 @@
     }
   }
 
-  backend "s3" {
-    bucket = "aws-state-dev"
-     key    = "01-vpc"
-     region = "us-east-1"
-     dynamodb_table = "aws-locking-dev"
-  }
+  # backend "s3" {
+  #   bucket = "aws-state-dev"
+  #    key    = "01-vpc"
+  #    region = "us-east-1"
+  #    dynamodb_table = "aws-locking-dev"
+  # }
 }
 
 provider "aws" {
   region = "us-east-1"
 }
+
