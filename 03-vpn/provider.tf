@@ -6,12 +6,12 @@ terraform {
     }
   }
 
-  # backend "s3" {
-  #   bucket = "aws-remote-state"
-  #    key    = "vpn"
-  #    region = "us-east-1"
-  #    dynamodb_table = "aws-dev"
-  # }
+  backend "s3" {
+    bucket = "aws-state-dev"
+     key    = "03-vpn"
+     region = "us-east-1"
+     dynamodb_table = "aws-locking-dev"
+  }
 }
 
 provider "aws" {

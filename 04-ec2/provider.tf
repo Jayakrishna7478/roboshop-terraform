@@ -7,11 +7,11 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "aws-remote-state"
-     key    = "ec2"
-     region = "us-east-1"
-     dynamodb_table = "aws-dev"
-  }
+      bucket = "aws-state-dev"
+      key    = "04-ec2"
+      region = "us-east-1"
+      dynamodb_table = "aws-locking-dev"
+    }
 }
 
 provider "aws" {
